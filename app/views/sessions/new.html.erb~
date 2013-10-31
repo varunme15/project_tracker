@@ -1,0 +1,28 @@
+<h1>Login</h1>
+<% if flash[:status] == FALSE %>
+
+<%= flash[:alert] %>
+
+<%end%>
+<%= form_for(:sessions, :url => sessions_path) do |f| %>
+<table>
+<tr>
+<td>
+<%= f.label :Email %>
+</td>
+<td>
+<%= f.textfield :email %>
+</td>
+<tr>
+<tr>
+<td>
+<%= f.label :Password %>
+</td>
+<td>
+<%= f.textfield :password %>
+</td>
+<tr>
+<%= f.submit "Login" %>
+</tr>
+</table>
+<% end %>
