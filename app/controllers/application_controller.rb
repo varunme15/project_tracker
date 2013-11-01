@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
       redirect_to login_path
     else
       @user = User.find(session[:user_id])
-      @user_full_name = @user.first_name
+      @user_full_name = "#{@user.first_name} #{@user.last_name}"
     end
   end
 end
